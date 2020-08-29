@@ -33,7 +33,7 @@ p {
   margin: auto;
   padding: 0px 25px;
 }
-.centerItem {
+.centerBoth {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,11 +136,52 @@ header::after {
 .payments h1 {
   margin-top: -3rem;
 }
+
+/* ******************** Footer ********************** */
+
+footer {
+  color: white;
+  background-color: var(--blueBG);
+  padding: 100px 25px 25px 25px;
+}
+footer h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+footer ul {
+  list-style: none;
+  letter-spacing: 0.02rem;
+}
+footer li {
+  margin-bottom: 0.3rem;
+  line-height: 1.7rem;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+.footerMenu {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.footerMenu div {
+  grid-column: span 1;
+  padding: 0 15px;
+}
+.footerMenu div:first-child {
+  padding-left: 0;
+}
+.footerMenu div:last-child {
+  grid-column: span 2;
+}
+.footerMenu p {
+  font-size: 0.8rem;
+  font-family: 'Fakt Hair';
+  line-height: 1.4rem;
+}
 /*************** Small screens ****************/
 @media screen and (max-width: 770px) {
-  .pageContainer {
-    width: 100%;
-  }
   nav {
     display: none;
   }
@@ -156,12 +197,21 @@ header::after {
   .payments article:first-child {
     row-gap: 2rem;
   }
+  footer {
+    padding-top: 50px;
+  }
+  .footerMenu {
+    row-gap: 50px;
+  }
+  .footerMenu div {
+    grid-column: span 3;
+  }
+  .footerMenu div:last-child {
+    grid-column: span 4;
+  }
 }
 /***************** Medium screens *********************/
 @media screen and (min-width: 770px) and (max-width: 1250px) {
-  .pageContainer {
-    width: 100%;
-  }
   nav {
     display: none;
   }
