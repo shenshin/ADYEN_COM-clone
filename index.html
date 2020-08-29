@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <!-- Font awesome icons -->
+    <!-- Font awesome icons (fas classes) -->
     <script
       src="https://kit.fontawesome.com/c1e7b031e5.js"
       crossorigin="anonymous"
@@ -19,49 +19,144 @@
   <body>
     <div class="pageContainer">
       <header>
-        <img
-          class="adyenLogo"
-          src="./img/companyLogos/adyen-header-logo-green.svg"
-          alt="Adyen logo"
-        />
+        <div class="adyenLogo">
+          <a href="https://www.adyen.com/">
+            <img
+              class="responsiveImg"
+              src="./img/companyLogos/adyen-header-logo-green.svg"
+              alt="Adyen logo"
+            />
+          </a>
+        </div>
 
         <div class="sideBar">
           <span style="font-size: 24px">
             <i class="fas fa-bars"></i>
           </span>
         </div>
+
+        <!-- ------------------------------Menu----------------------- -->
+
         <nav>
           <div class="menuItem centerItem menuLeft">
-            <span>Our solution</span>
+            <a href="https://www.adyen.com/our-solution/online-payments"
+              >Our solution</a
+            >
             <span class="material-icons">keyboard_arrow_down</span>
           </div>
           <div class="menuItem centerItem menuLeft">
-            <span>Customers</span>
+            <a href="https://www.adyen.com/customers">Customers</a>
           </div>
           <div class="menuItem centerItem menuLeft">
-            <span>About us</span>
+            <a href="https://www.adyen.com/about">About us</a>
             <span class="material-icons">keyboard_arrow_down</span>
           </div>
           <div class="menuItem centerItem menuLeft">
-            <span>Documentation</span>
+            <a href="https://docs.adyen.com/">Documentation</a>
             <span class="material-icons">keyboard_arrow_down</span>
           </div>
           <div class="menuItem centerItem divider">
-            <span style="font-size: 13px">
-              <i class="fas fa-search"></i>
-            </span>
+            <a href="https://www.adyen.com/#search-modal">
+              <span style="font-size: 13px">
+                <i class="fas fa-search"></i>
+              </span>
+            </a>
           </div>
           <div class="menuItem centerItem menuRight">
-            <span>Contact us</span>
+            <a href="https://www.adyen.com/contact">Contact us</a>
           </div>
           <div class="menuItem centerItem menuRight">
-            <span>Log in</span>
+            <a href="https://authn-live.adyen.com/authn/index.html">Log in</a>
           </div>
           <div class="button">
-            <span>Create an account</span>
+            <a href="https://www.adyen.com/signup"> Create an account </a>
           </div>
         </nav>
       </header>
+      <main>
+        <!-- ---------------Accept payments everywhere--------------------- -->
+        <section class="payments">
+          <article>
+            <div class="centerVertically leftPercent">
+              <div>
+                <h1>Accept payments everywhere</h1>
+                <p>
+                  Meet the payments platform built for any business and every
+                  customer journey.
+                </p>
+                <div class="button">
+                  <a href="https://www.adyen.com/signup">
+                    Start your journey with us
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <video
+                video__selfhosted
+                class="responsiveVideo"
+                autoplay
+                muted
+                playsinline
+                loop
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+                width="100%"
+              >
+                <source src="./img/media/anthem.mp4" type="video/mp4" />
+                Your browser does not support the video tag
+              </video>
+            </div>
+          </article>
+          <article>
+            <div>
+              <img
+                class="responsiveImg"
+                src="img/companyLogos/uber-logobar-svg.svg"
+                alt="Uber"
+              />
+            </div>
+            <div>
+              <img
+                class="responsiveImg"
+                src="img/companyLogos/logobar-mango-black.png"
+                alt="Mango"
+              />
+            </div>
+            <div>
+              <img
+                class="responsiveImg"
+                src="img/companyLogos/booking-com-logobar-svg.svg"
+                alt="Booking.com"
+              />
+            </div>
+            <div>
+              <img
+                class="responsiveImg"
+                src="img/companyLogos/ebay-logobar.svg"
+                alt="Ebay"
+              />
+            </div>
+            <div>
+              <img
+                class="responsiveImg"
+                src="img/companyLogos/happy-socks-logobar-svg.svg"
+                alt="Happy Socks"
+              />
+            </div>
+            <div>
+              <img
+                class="responsiveImg"
+                src="img/companyLogos/spotify-logobar-svg.svg"
+                alt="Spotify"
+              />
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer></footer>
     </div>
   </body>
 </html>
