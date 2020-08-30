@@ -23,6 +23,10 @@ h1 {
   line-height: 4.625rem;
   margin-bottom: 1rem;
 }
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
 p {
   font-size: 1.25rem;
   margin-top: 1rem;
@@ -115,6 +119,22 @@ header::after {
   border-radius: 3px;
   cursor: pointer;
 }
+.button2 {
+  margin-top: 25px;
+}
+.button2 a {
+  color: var(--greenAdyen);
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.8rem 0;
+}
+.button2 a i {
+  font-size: 0.7rem;
+}
+.button2 a:hover {
+  border-bottom: 1px solid var(--greenAdyen);
+} 
 .socialLogo {
   background: var(--blueBG);
   border: 1px solid var(--bottomBorger);
@@ -141,6 +161,7 @@ header::after {
 .greenIcon {
   width: 40px;
   height: 40px;
+  margin-bottom: 25px;
 }
 
 /* **************** Payments ****************** */
@@ -164,15 +185,15 @@ header::after {
 /* ********************** Section2  **********************/
 #section2 {
   background: var(--greyBG);
+  padding: 80px 0;
 }
 .section2 {
   display: flex;
 }
 .section2 article {
-  /* flex-grow: 1;
-  flex-shrink: 1; */
   flex-basis: 33.33%;
-  
+  text-align: center;
+  padding: 20px;
 }
 
 /* ******************** Footer ********************** */
@@ -312,6 +333,12 @@ footer a:hover {
   }
   #payments article:first-child {
     row-gap: 2rem;
+  }
+  #section2 {
+    padding: 50px 0;
+  }
+  .section2 {
+    flex-direction: column;
   }
   footer {
     padding-top: 50px;
