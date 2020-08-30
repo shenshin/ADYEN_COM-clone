@@ -88,6 +88,12 @@ nav {
   margin-left: auto;
   margin-right: 20px;
 }
+/* Clear floats */
+header::after {
+  content: '';
+  clear: both;
+  display: table;
+}
 /* ********************* buttons ********************** */
 
 .button a:hover {
@@ -110,7 +116,6 @@ nav {
   cursor: pointer;
 }
 .socialLogo {
-  
   background: var(--blueBG);
   border: 1px solid var(--bottomBorger);
   border-radius: 3px;
@@ -121,7 +126,6 @@ nav {
 .socialLogo a {
   color: #949fb0;
   padding: 20px;
-  
 }
 .socialLogosContainer {
   padding: 0;
@@ -134,29 +138,41 @@ nav {
 .responsiveImg {
   width: 100%;
 }
-
-/* Clear floats */
-header::after {
-  content: '';
-  clear: both;
-  display: table;
+.greenIcon {
+  width: 40px;
+  height: 40px;
 }
+
 /* **************** Payments ****************** */
 
-.payments article:first-child {
+#payments article:first-child {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.payments article:last-child {
+#payments article:last-child {
   margin: 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-.payments .button {
+#payments .button {
   margin-top: 2rem;
 }
-.payments h1 {
+#payments h1 {
   margin-top: -3rem;
+}
+
+/* ********************** Section2  **********************/
+#section2 {
+  background: var(--greyBG);
+}
+.section2 {
+  display: flex;
+}
+.section2 article {
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+  flex-basis: 33.33%;
+  
 }
 
 /* ******************** Footer ********************** */
@@ -285,16 +301,16 @@ footer a:hover {
   nav {
     display: none;
   }
-  .payments div {
+  #payments div {
     grid-column: span 2;
   }
-  .payments h1 {
+  #payments h1 {
     margin-top: 2rem;
   }
   .leftPercent {
     width: 100%;
   }
-  .payments article:first-child {
+  #payments article:first-child {
     row-gap: 2rem;
   }
   footer {

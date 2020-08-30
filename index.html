@@ -17,8 +17,8 @@
     <title>Adyen Clone</title>
   </head>
   <body>
-    <div class="pageContainer">
-      <header>
+    <header>
+      <div class="pageContainer">
         <div class="adyenLogo">
           <a href="https://www.adyen.com/">
             <img
@@ -72,10 +72,12 @@
             <a href="https://www.adyen.com/signup"> Create an account </a>
           </div>
         </nav>
-      </header>
-      <main>
-        <!-- ---------------Accept payments everywhere--------------------- -->
-        <section class="payments">
+      </div>
+    </header>
+    <main>
+      <!-- -----------------------Accept payments everywhere--------------------- -->
+      <section id="payments">
+        <div class="pageContainer">
           <article>
             <div class="centerVertically leftPercent">
               <div>
@@ -106,7 +108,6 @@
                 width="100%"
               >
                 <source src="./img/media/anthem.mp4" type="video/mp4" />
-                Your browser does not support the video tag
               </video>
             </div>
           </article>
@@ -154,10 +155,69 @@
               />
             </div>
           </article>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+
+      <!-- ------------------------- Section 2 ----------------------------- -->
+
+      <section id="section2">
+        <div class="section2 pageContainer">
+          <article>
+            <img
+              class="greenIcon"
+              src="./img/greenIcons/icon_world_green.svg"
+              alt="Growth"
+            />
+            <h3>Growth</h3>
+            <p>
+              Expand into new markets with local acquiring and payment methods.
+            </p>
+            <div class="button2">
+              <a href="https://www.adyen.com/payment-methods"
+                >Payment methods <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article>
+            <img
+              class="greenIcon"
+              src="./img/greenIcons/revenue-protect-icon-green-svg.svg"
+              alt="Revenue"
+            />
+            <h3>Revenue</h3>
+            <p>
+              Optimize each transaction, increase conversions, and drive
+              revenue.
+            </p>
+            <div class="button2">
+              <a href="https://www.adyen.com/our-solution/revenue-optimization"
+                >RevenueAccelerate <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article>
+            <img
+              class="greenIcon"
+              src="./img/greenIcons/issuing-icon-svg-green.svg"
+              alt="Revenue"
+            />
+            <h3>Real partnership</h3>
+            <p>
+              Access expert advice and support from a dedicated team of payments
+              specialists.
+            </p>
+            <div class="button2">
+              <a href="https://www.adyen.com/customer-success"
+                >Start your journey <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
     <!-- --------------------- FOOTER -------------------------- -->
+
     <footer>
       <div class="pageContainer">
         <div class="footerMenu">
@@ -296,7 +356,9 @@
             </div>
           </section>
         </div>
+
         <!-- ------------------- Footer bottom ------------------------- -->
+
         <div class="footerBottom">
           <div>
             <p>
