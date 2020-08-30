@@ -20,8 +20,13 @@ body {
 }
 h1 {
   font-size: 4rem;
+  font-weight: 600;
   line-height: 4.625rem;
   margin-bottom: 1rem;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
 }
 h3 {
   font-size: 2rem;
@@ -214,6 +219,13 @@ All this looks like a bug on a page but despite that I tried to copy it exactly
   margin: 0 25px;
 }
 
+/* ********************** Section3  **********************/
+
+#section3 {
+  padding: 30px 28% 100px 28%;
+  text-align: center;
+}
+
 /* ******************** Footer ********************** */
 
 footer {
@@ -360,6 +372,9 @@ footer a:hover {
   }
   .spacer {
     display: none;
+  }
+  #section3 {
+    padding: 50px 25px 60px 25px;
   }
   footer {
     padding-top: 50px;
