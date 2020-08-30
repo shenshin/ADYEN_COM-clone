@@ -134,7 +134,7 @@ header::after {
 }
 .button2 a:hover {
   border-bottom: 1px solid var(--greenAdyen);
-} 
+}
 .socialLogo {
   background: var(--blueBG);
   border: 1px solid var(--bottomBorger);
@@ -194,6 +194,24 @@ header::after {
   flex-basis: 33.33%;
   text-align: center;
   padding: 20px;
+}
+
+/* I dont know why, but original page has something like spacer between section 2 and 3 */
+/* It has a very cpecific behaviour: 
+- height is changing depending on the page width;
+- it has fixed size margins on medium screens while on big they begin to grow
+- on small screens the spacer disappears
+All this looks like a bug on a page but despite that I tried to copy it exactly
+*/
+
+.spacer {
+  background-color: var(--greyBG);
+}
+.spacer div {
+  background-color: white;
+  max-width: 100%;
+  height: 7vw;
+  margin: 0 25px;
 }
 
 /* ******************** Footer ********************** */
@@ -340,6 +358,9 @@ footer a:hover {
   .section2 {
     flex-direction: column;
   }
+  .spacer {
+    display: none;
+  }
   footer {
     padding-top: 50px;
   }
@@ -380,3 +401,8 @@ footer a:hover {
   .pageContainer {
     width: 1250px;
   }
+  .spacer div {
+    width: 1200px;
+    margin: auto;
+  }
+}
