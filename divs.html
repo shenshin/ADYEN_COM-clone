@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divs</title>
+    <!-- Font awesome icons (fas classes) -->
+    <script
+      src="https://kit.fontawesome.com/c1e7b031e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .centerBoth {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .socialLogo {
+        background: black;
+        border: 1px solid orange;
+        border-radius: 3px;
+        height: 42px;
+        width: 42px;
+        overflow: hidden;
+      }
+      .socialLogo a {
+        color: #949fb0;
+        background-color: darkmagenta;
+        padding: 15px;
+      }
+      .socialLogosContainer {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="socialLogosContainer">
+      <div class="socialLogo centerBoth">
+        <a href="https://www.linkedin.com/company/adyen">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <div class="socialLogo centerBoth">
+        <a href="https://twitter.com/Adyen">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="socialLogo centerBoth">
+        <a href="https://www.facebook.com/AdyenPayments/">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
