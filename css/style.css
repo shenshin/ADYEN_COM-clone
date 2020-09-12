@@ -1,17 +1,31 @@
+/* replace material icons with amazing */
+
+/* good use of em and rem values, make layout more scalable. Try to be more 
+consistent with using it tough, rem and em can be used for margin and paddings with favirably */
+/* try to work more with rem values in your margin and paddings */
+/* brush up on using em and rem together 
+( https://j.eremy.net/confused-about-rem-and-em/ )
+*/
+
+/* nice that you used css grid for section 4. 
+try to prefer 
+flexbox over grid for simpler layout tasks 
+*/
+
 @import url(fonts.css);
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  --greenAdyen: #1cb642;
-  --blueText: #000e21;
-  --blueBG: #030d26;
+  --greenAdyen: #0abf53;
+  --blueText: #00112c;
+  --blueBG: #00112c;
   --greyBG: #f1f4f8;
-  --bottomBorger: #2a364e;
+  --bottomBorger: #374661;
 }
 html {
-  font-size: 16px;
+  font-size: 100%; /* equals browser's standart size 16px */
 }
 body {
   font-family: 'Fakt', sans-serif, Helvetica, Arial;
@@ -42,22 +56,22 @@ p {
   margin-bottom: 1rem;
   line-height: 1.878rem;
 }
-.pageContainer {
+.page-container {
   width: 100%;
   margin: auto;
   padding: 0px 25px;
 }
-.centerBoth {
+.center-both {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.centerVertically {
+.center-vertically {
   display: flex;
   align-items: center; /* Align vertically */
   justify-content: flex-start;
 }
-.leftPercent {
+.left-percent {
   width: 80%;
 }
 /* ********************* Header menu ********************** */
@@ -68,38 +82,40 @@ nav {
   justify-content: flex-start; /* Horizontally */
   height: 72px;
 }
-.adyenLogo {
+.adyen-logo {
   height: 72px;
   width: 100px;
   padding-top: 14px;
   float: left;
 }
-.sideBar {
+.side-bar {
   margin-top: 20px;
+  font-size: 1.5rem;
   float: right;
 }
-.menuItem {
+.menu-item {
   height: 100%;
   font-weight: 200;
   border-top: 4px solid white;
 }
-.menuItem a {
+.menu-item a {
   text-decoration: none;
   color: var(--blueText);
 }
-.menuLeft {
+.menu-left {
   margin-left: 35px;
 }
-.menuRight {
+.menu-right {
   margin-right: 20px;
 }
-.menuItem:hover {
+.menu-item:hover {
   border-top: 4px solid var(--greenAdyen);
 }
-.divider {
+.search {
   padding: 0 20px;
   margin-left: auto;
   margin-right: 20px;
+  font-size: 0.9rem;
 }
 /* Clear floats */
 header::after {
@@ -108,7 +124,7 @@ header::after {
   display: table;
 }
 /* ********************* buttons ********************** */
-a.button {
+a.green-button {
   display: inline-block;
   background-color: var(--greenAdyen);
   border-radius: 3px;
@@ -127,14 +143,14 @@ a.button {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-a.button:hover {
+a.green-button:hover {
   background-color: #167d30;
   transition-property: background-color;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
 
-a.button2 {
+a.green-text-button {
   display: inline-block;
   margin-top: 25px;
   color: var(--greenAdyen);
@@ -144,14 +160,14 @@ a.button2 {
   border-bottom: 1px solid transparent;
   padding: 0.8rem 0;
 }
-a.button2 i {
+a.green-text-button i {
   font-size: 0.7rem;
 }
-a.button2:hover {
+a.green-text-button:hover {
   border-bottom: 1px solid var(--greenAdyen);
 }
 
-.socialLogo {
+.social-logo {
   background: var(--blueBG);
   border: 1px solid var(--bottomBorger);
   border-radius: 3px;
@@ -159,11 +175,11 @@ a.button2:hover {
   width: 42px;
   overflow: hidden;
 }
-.socialLogo a {
+.social-logo a {
   color: #949fb0;
   padding: 20px;
 }
-.socialLogosContainer {
+.social-logos-container {
   padding: 0;
   margin: 0;
   display: flex;
@@ -171,10 +187,10 @@ a.button2:hover {
   width: 150px;
 }
 /* ******************** Media ************************* */
-.responsiveImg {
+.responsive-img {
   width: 100%;
 }
-.greenIcon {
+.green-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 25px;
@@ -182,34 +198,34 @@ a.button2:hover {
 
 /* **************** Payments ****************** */
 
-#payments {
+.payments {
   overflow-x: hidden;
 }
-#payments article:first-child {
+.payments article:first-child {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#payments article:last-child {
+.payments article:last-child {
   margin: 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-#payments .button {
+.payments .green-button {
   margin-top: 2rem;
 }
-#payments h1 {
+.payments h1 {
   margin-top: -3rem;
 }
 
-/* ********************** Section2  **********************/
-#section2 {
+/* ********************** growth-revenue  **********************/
+section.growth-revenue {
   background: var(--greyBG);
   padding: 80px 0;
 }
-.section2 {
+.growth-revenue {
   display: flex;
 }
-.section2 article {
+.growth-revenue article {
   flex-basis: 33.33%;
   text-align: center;
   padding: 20px;
@@ -233,24 +249,24 @@ All this looks like a bug on a page but despite that I tried to copy it exactly
   margin: 0 25px;
 }
 
-/* ********************** Section3  **********************/
+/* ********************** sales-channels  **********************/
 
-#section3 {
+.sales-channels {
   padding: 30px 28% 100px 28%;
   text-align: center;
 }
 
-/* ********************** Section4  **********************/
+/* ********************** online-payments  **********************/
 
-#section4 {
+section.online-payments {
   padding-bottom: 100px;
 }
-#section4 .pageContainer {
+.online-payments .page-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
-#section4 article img {
+.online-payments article img {
   margin-bottom: 20px;
 }
 
@@ -271,42 +287,42 @@ footer a:hover {
 
 /* ******************** Footer Sections ********************** */
 
-.footerMenu {
+.footer-menu {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   padding-bottom: 25px;
 }
-.footerMenu h5 {
+.footer-menu h5 {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
 }
-.footerMenu ul {
+.footer-menu ul {
   list-style: none;
   letter-spacing: 0.02rem;
 }
-.footerMenu li {
+.footer-menu li {
   margin-bottom: 0.3rem;
   line-height: 1.7rem;
 }
-.footerMenu section {
+.footer-menu section {
   grid-column: span 1;
   padding: 0 15px;
 }
-.footerMenu section:first-child {
+.footer-menu section:first-child {
   padding-left: 0;
 }
-.footerMenu section:last-child {
+.footer-menu section:last-child {
   grid-column: span 2;
   padding-top: 2rem;
 }
-.footerMenu p {
+.footer-menu p {
   font-size: 0.8rem;
   font-family: 'Fakt Hair';
   line-height: 1.4rem;
 }
 /* ************************** Email textfield ********************* */
-.emailTextfield {
+.email-textfield {
   height: 50px;
   width: 100%;
   border: 1px solid #949fb0;
@@ -315,16 +331,16 @@ footer a:hover {
   display: flex;
   margin-top: 15px;
 }
-.emailTextfield div:first-child {
+.email-textfield div:first-child {
   flex-basis: 100%;
   background-color: var(--blueBG);
 }
-.emailTextfield div:last-child {
+.email-textfield div:last-child {
   flex-shrink: 0;
   flex-basis: 50px;
   background-color: white;
 }
-.emailTextfield input {
+.email-textfield input {
   background-color: transparent;
   width: 100%;
   height: 100%;
@@ -332,47 +348,47 @@ footer a:hover {
   padding: 12px;
   color: white;
 }
-.emailTextfield input::placeholder {
+.email-textfield input::placeholder {
   font-size: 1rem;
   color: white;
   font-family: 'Fakt';
   font-weight: 100;
 }
-.emailRightAngle {
+.email-right-angle {
   color: var(--blueText);
   font-size: 14px;
 }
 /* ************************ Footer bottom ************************ */
-.footerBottom {
+.footer-bottom {
   border-top: 1px solid var(--bottomBorger);
   padding-top: 10px;
   display: flex;
 }
-.footerBottom div:last-child {
+.footer-bottom div:last-child {
   margin-left: auto;
 }
-.footerBottom div:first-child p {
+.footer-bottom div:first-child p {
   font-size: 0.75rem;
 }
-.footerBottom div:last-child p {
+.footer-bottom div:last-child p {
   font-size: 1rem;
   letter-spacing: 0.03rem;
 }
-.footerBottom div:last-child a {
+.footer-bottom div:last-child a {
   font-weight: 400;
 }
-.footerBottom div:last-child a:hover {
+.footer-bottom div:last-child a:hover {
   text-decoration: none;
 }
-.privacyStatement {
+.privacy-statement {
   color: var(--greenAdyen);
   font-family: 'Fakt';
   font-weight: 200;
 }
-.privacyStatement:hover {
+.privacy-statement:hover {
   text-decoration: none;
 }
-.greenArrow {
+.green-arrow {
   color: var(--greenAdyen);
 }
 
@@ -382,69 +398,70 @@ footer a:hover {
   nav {
     display: none;
   }
-  #payments div {
+  .payments div {
     grid-column: span 2;
   }
-  #payments h1 {
+  .payments h1 {
     margin-top: 2rem;
     font-size: 2.5rem;
     line-height: 3.125rem;
   }
-  a.button, a.button2 {
+  a.green-button,
+  a.green-text-button {
     width: 100%;
   }
-  .leftPercent {
+  .left-percent {
     width: 100%;
   }
-  #payments article:first-child {
+  .payments article:first-child {
     row-gap: 2rem;
   }
-  #section2 {
+  section.growth-revenue {
     padding: 50px 0;
   }
-  .section2 {
+  .growth-revenue {
     flex-direction: column;
   }
-  .section2 article {
+  .growth-revenue article {
     flex-basis: 100%;
-    
+
     padding: 20px 0;
   }
   .spacer {
     display: none;
   }
-  #section3 {
+  #sales-channels {
     padding: 50px 25px 60px 25px;
   }
-  #section4 {
+  .online-payments {
     padding-bottom: 50px;
   }
-  #section4 article {
+  .online-payments article {
     grid-column: span 2;
   }
   footer {
     padding-top: 50px;
   }
-  .footerMenu {
+  .footer-menu {
     row-gap: 2rem;
   }
-  .footerMenu section {
+  .footer-menu section {
     grid-column: span 3;
   }
-  .footerMenu section:last-child {
+  .footer-menu section:last-child {
     grid-column: span 6;
     padding-top: 0;
   }
-  .footerMenu section:nth-child(odd) {
+  .footer-menu section:nth-child(odd) {
     padding-left: 0;
   }
-  .footerBottom {
+  .footer-bottom {
     flex-direction: column-reverse;
   }
-  .footerBottom div:last-child {
+  .footer-bottom div:last-child {
     margin-left: unset;
   }
-  .footerBottom div:last-child p {
+  .footer-bottom div:last-child p {
     margin-bottom: 5px;
   }
 }
@@ -454,59 +471,59 @@ footer a:hover {
   nav {
     display: none;
   }
-  #payments div {
+  .payments div {
     grid-column: span 2;
   }
-  #payments h1 {
+  .payments h1 {
     margin-top: 2rem;
   }
-  .leftPercent {
+  .left-percent {
     width: 100%;
   }
-  #payments article:first-child {
+  .payments article:first-child {
     row-gap: 2rem;
   }
-  #section2 {
+  section.growth-revenue {
     padding: 50px 0;
   }
-  .section2 {
+  .growth-revenue {
     flex-direction: column;
   }
   .spacer {
     display: none;
   }
-  #section3 {
+  #sales-channels {
     padding: 50px 25px 60px 25px;
   }
-  #section4 {
+  .online-payments {
     padding-bottom: 50px;
   }
-  #section4 article {
+  .online-payments article {
     grid-column: span 2;
   }
   footer {
     padding-top: 50px;
   }
-  .footerMenu {
+  .footer-menu {
     row-gap: 2rem;
   }
-  .footerMenu section {
+  .footer-menu section {
     grid-column: span 3;
   }
-  .footerMenu section:last-child {
+  .footer-menu section:last-child {
     grid-column: span 4;
     padding-top: 0;
   }
-  .footerMenu section:nth-child(odd) {
+  .footer-menu section:nth-child(odd) {
     padding-left: 0;
   }
-  .footerBottom {
+  .footer-bottom {
     flex-direction: column-reverse;
   }
-  .footerBottom div:last-child {
+  .footer-bottom div:last-child {
     margin-left: unset;
   }
-  .footerBottom div:last-child p {
+  .footer-bottom div:last-child p {
     margin-bottom: 5px;
   }
 }
@@ -518,10 +535,10 @@ footer a:hover {
 }
 /******************** Large screens ***********************/
 @media screen and (min-width: 1250px) {
-  .sideBar {
+  .side-bar {
     display: none;
   }
-  .pageContainer {
+  .page-container {
     width: 1250px;
   }
   .spacer div {
