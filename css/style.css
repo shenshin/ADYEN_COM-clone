@@ -29,9 +29,7 @@ flexbox over grid for simpler layout tasks
   --blue-social-logo: #949fb0;
   --dark-green-buttons-hover: #167d30;
 }
-html {
-  font-size: 100%; /* equals browser's standart size 16px */
-}
+
 body {
   font-family: 'Fakt', sans-serif, Helvetica, Arial;
   font-weight: 200;
@@ -73,7 +71,7 @@ p {
 .page-container {
   width: 100%;
   margin: auto;
-  padding: 0px 25px;
+  padding: 0px 1.5625rem;
 }
 .center-both {
   display: flex;
@@ -99,52 +97,41 @@ p {
 }
 /* ********************* Header menu ********************** */
 nav {
+  height: 4.5rem;
   display: flex;
-  flex-direction: row;
-  align-items: center; /* Align vertically */
-  justify-content: flex-start; /* Horizontally */
-  height: 72px;
 }
 .adyen-logo {
-  height: 72px;
-  width: 100px;
-  padding-top: 14px;
-  float: left;
+  margin-right: 2rem;
+  /* negative margin to fix centering 
+  of asymmetric icon */
+  margin-top: -0.3125rem;
+  width: 6.25rem;
 }
-.side-bar {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  float: right;
-}
-.menu-item {
-  height: 100%;
-  font-weight: 200;
-  border-top: 4px solid var(--white-page-background);
-}
-.menu-item a {
+a.menu-item {
+  margin-right: 1.8rem;
   text-decoration: none;
   color: var(--blue-text);
+  font-weight: 200;
+  border-top: 4px solid transparent;
 }
-.menu-left {
-  margin-left: 35px;
-}
-.menu-right {
-  margin-right: 20px;
-}
-.menu-item:hover {
-  border-top: 4px solid var(--green-adyen);
-}
-.search {
-  padding: 0 20px;
-  margin-left: auto;
-  margin-right: 20px;
+a.menu-item i {
+  margin-left: 0.4rem;
   font-size: 0.9rem;
 }
-/* Clear floats */
-header::after {
-  content: '';
-  clear: both;
-  display: table;
+a.menu-item:hover {
+  border-top: 4px solid var(--green-adyen);
+}
+a.search {
+  margin-right: 1rem;
+  padding: 0 1rem;
+  /* Align right for menu items 
+  right from search icon  */
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+.side-bar {
+  margin-left: auto;
+  font-size: 1.5rem;
 }
 /* ********************* buttons ********************** */
 a.green-button {
@@ -303,8 +290,9 @@ footer a:hover {
 /* ******************** Footer Sections ********************** */
 
 .footer-menu {
+  /* ----------spacing---------- */
   padding-bottom: 1.5625rem;
-
+  /* --------------------------- */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
@@ -314,22 +302,27 @@ footer a:hover {
   list-style: none;
 }
 .footer-menu li {
+  /* ----------spacing---------- */
   margin-bottom: 0.3rem;
-
+  /* --------------------------- */
   line-height: 1.7rem;
 }
 .footer-menu section {
+  /* ----------spacing---------- */
   padding: 0 15px;
-
+  /* --------------------------- */
   grid-column: span 1;
 }
 .footer-menu section:first-child {
+  /* ----------spacing---------- */
   padding-left: 0;
+  /* --------------------------- */
 }
 .footer-menu section:last-child {
+  /* ----------spacing---------- */
   padding-right: 0;
   padding-top: 2rem;
-
+  /* --------------------------- */
   grid-column: span 2;
 }
 .footer-menu p {
@@ -338,14 +331,15 @@ footer a:hover {
   line-height: 1.4rem;
   color: var(--blue-social-logo);
 }
-.footer-menu section:last-child a:hover {
+.footer-menu a.green-text:hover {
   text-decoration: none;
 }
 /* ************************** Email textfield ********************* */
 .email-textfield {
   --input-height: 3.125rem;
+  /* ----------spacing---------- */
   margin-top: 1rem;
-
+  /* --------------------------- */
   height: var(--input-height);
   width: 100%;
   border: 1px solid var(--blue-social-logo);
@@ -363,8 +357,9 @@ footer a:hover {
   background-color: var(--white-page-background);
 }
 .email-textfield input {
+  /* ----------spacing---------- */
   padding: 0.75rem;
-
+  /* --------------------------- */
   background-color: transparent;
   width: 100%;
   height: 100%;
@@ -379,8 +374,9 @@ footer a:hover {
 
 /* ************************ Footer bottom ************************ */
 .footer-bottom {
+  /* ----------spacing---------- */
   padding-top: 0.625rem;
-
+  /* --------------------------- */
   border-top: 1px solid var(--blue-bottom-border);
   display: flex;
 }
@@ -404,7 +400,8 @@ footer a:hover {
 /* *************** Mobile Phone **************** */
 
 @media screen and (max-width: 449px) {
-  nav {
+  .menu-item,
+  nav .green-button {
     display: none;
   }
   .payments div {
@@ -477,7 +474,8 @@ footer a:hover {
 
 /*************** Small screens ****************/
 @media screen and (min-width: 450px) and (max-width: 769px) {
-  nav {
+  .menu-item,
+  nav .green-button {
     display: none;
   }
   .payments div {
@@ -538,7 +536,8 @@ footer a:hover {
 }
 /***************** Medium screens *********************/
 @media screen and (min-width: 770px) and (max-width: 1249px) {
-  nav {
+  .menu-item,
+  nav .green-button {
     display: none;
   }
 }

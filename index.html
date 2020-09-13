@@ -17,58 +17,66 @@
     <title>Adyen Clone</title>
   </head>
   <body>
-    <header>
-      <div class="page-container">
-        <div class="adyen-logo">
-          <a href="https://www.adyen.com/">
-            <img
-              class="responsive-img"
-              src="./img/companyLogos/adyen-header-logo-green.svg"
-              alt="Adyen logo"
-            />
-          </a>
-        </div>
+    <header class="page-container">
+      <!-- ------------------------------Menu----------------------- -->
+      <nav>
+        <a class="adyen-logo center-both" href="https://www.adyen.com/">
+          <img
+            class="responsive-img"
+            src="./img/companyLogos/adyen-header-logo-green.svg"
+            alt="Adyen logo"
+          />
+        </a>
 
-        <div class="side-bar">
-          <i class="fas fa-bars"></i>
-        </div>
+        <a
+          class="menu-item center-both"
+          href="https://www.adyen.com/our-solution/online-payments"
+        >
+          Our solution<i class="fas fa-chevron-down"></i>
+        </a>
 
-        <!-- ------------------------------Menu----------------------- -->
+        <a class="menu-item center-both" href="https://www.adyen.com/customers">
+          Customers
+        </a>
 
-        <nav>
-          <div class="menu-item center-both menu-left">
-            <a href="https://www.adyen.com/our-solution/online-payments"
-              >Our solution</a
-            >
-            <span class="material-icons">keyboard_arrow_down</span>
-          </div>
-          <div class="menu-item center-both menu-left">
-            <a href="https://www.adyen.com/customers">Customers</a>
-          </div>
-          <div class="menu-item center-both menu-left">
-            <a href="https://www.adyen.com/about">About us</a>
-            <span class="material-icons">keyboard_arrow_down</span>
-          </div>
-          <div class="menu-item center-both menu-left">
-            <a href="https://docs.adyen.com/">Documentation</a>
-            <span class="material-icons">keyboard_arrow_down</span>
-          </div>
-          <div class="menu-item center-both search">
-            <a href="https://www.adyen.com/#search-modal">
-              <i class="fas fa-search"></i>
-            </a>
-          </div>
-          <div class="menu-item center-both menu-right">
-            <a href="https://www.adyen.com/contact">Contact us</a>
-          </div>
-          <div class="menu-item center-both menu-right">
-            <a href="https://authn-live.adyen.com/authn/index.html">Log in</a>
-          </div>
+        <a class="menu-item center-both" href="https://www.adyen.com/about">
+          About us
+          <i class="fas fa-chevron-down"></i>
+        </a>
+
+        <a class="menu-item center-both" href="https://docs.adyen.com/">
+          Documentation
+          <i class="fas fa-chevron-down"></i>
+        </a>
+
+        <a
+          class="menu-item center-both search"
+          href="https://www.adyen.com/#search-modal"
+        >
+          <i class="fas fa-search"></i>
+        </a>
+
+        <a class="menu-item center-both" href="https://www.adyen.com/contact">
+          Contact us
+        </a>
+
+        <a
+          class="menu-item center-both"
+          href="https://authn-live.adyen.com/authn/index.html"
+        >
+          Log in
+        </a>
+
+        <div class="center-both">
           <a class="green-button" href="https://www.adyen.com/signup">
             Create an account
           </a>
-        </nav>
-      </div>
+        </div>
+
+        <div class="side-bar center-both">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
     </header>
     <main>
       <!-- -----------------------Accept payments everywhere--------------------- -->
@@ -388,7 +396,7 @@
                   By submitting this form, you acknowledge that you have
                   reviewed the terms of our
                   <a
-                    class="green-text privacy-statement"
+                    class="green-text"
                     href="https://www.adyen.com/policies-and-disclaimer/privacy-policy"
                     >Privacy Statement</a
                   >
