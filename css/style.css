@@ -36,19 +36,13 @@ body {
   font-style: normal;
 }
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   line-height: 4.625rem;
 
   font-size: 4rem;
+  letter-spacing: -0.05rem;
   font-weight: 600;
 }
-/* h1,
-h2,
-h3,
-h4,
-h5 {
-  border: 1px solid orange;
-} */
 h2,
 h3,
 h4,
@@ -70,10 +64,11 @@ h5 {
   font-size: 1rem;
 }
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   line-height: 1.878rem;
 
   font-size: 1.25rem;
+  letter-spacing: 0.01rem;
 }
 .page-container {
   width: 100%;
@@ -88,7 +83,6 @@ p {
 .center-vertically {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
 }
 .left-percent {
@@ -231,17 +225,22 @@ a.green-text-button:hover {
 /* **************** Payments ****************** */
 
 .payments article:first-child {
+  margin-bottom: 3rem;
+
   display: flex;
 }
 .payments article:first-child div:first-child {
   flex-basis: 52%;
-  padding-right: 9%;
 }
 .payments article:first-child div:last-child {
   flex-basis: 48%;
 }
+.payments .center-vertically div {
+  width: 76%;
+}
 .payments article:last-child {
-  margin: 1.5rem 0;
+  margin-bottom: 3rem;
+
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
