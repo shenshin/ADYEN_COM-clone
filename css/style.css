@@ -85,9 +85,6 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-.left-percent {
-  width: 80%;
-}
 .white-text {
   color: var(--white-text);
 }
@@ -151,6 +148,7 @@ a.green-button {
   line-height: 2.85rem;
   /* Center horizontally */
   padding: 0 1.55rem;
+  text-align: center;
 
   display: inline-block;
   background-color: var(--green-adyen);
@@ -181,6 +179,7 @@ a.green-text-button {
   display: inline-block;
   color: var(--green-adyen);
   font-size: 1rem;
+
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid transparent;
@@ -223,7 +222,6 @@ a.green-text-button:hover {
 }
 
 /* **************** Payments ****************** */
-
 .payments article:first-child {
   margin-bottom: 3rem;
 
@@ -416,29 +414,40 @@ footer a:hover {
 
 /* *************** Mobile Phone **************** */
 
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 28.125rem) {
   .menu-item,
   nav .green-button {
     display: none;
   }
-  .payments div {
+  nav {
+    margin-bottom: 1.9rem;
+  }
+  .payments article:first-child {
+    flex-direction: column;
+  }
+  .payments .center-vertically div {
+    width: 100%;
+  }
+  .payments article:first-child div:first-child {
+    margin-bottom: 0.6rem;
+  }
+  .payments article:last-child div {
     grid-column: span 2;
   }
-  .payments h1 {
-    margin-top: 2rem;
+  .payments article:last-child,
+  .payments article:first-child {
+    margin-bottom: 1rem;
+  }
+  h1 {
     font-size: 2.5rem;
+    font-weight: 500;
     line-height: 3.125rem;
   }
   a.green-button,
   a.green-text-button {
     width: 100%;
   }
-  .left-percent {
-    width: 100%;
-  }
-  .payments article:first-child {
-    row-gap: 2rem;
-  }
+
   section.growth-revenue {
     padding: 50px 0;
   }
@@ -453,7 +462,7 @@ footer a:hover {
   .spacer {
     display: none;
   }
-  #sales-channels {
+  .sales-channels {
     padding: 50px 25px 60px 25px;
   }
   .online-payments {
@@ -490,23 +499,31 @@ footer a:hover {
 }
 
 /*************** Small screens ****************/
-@media screen and (min-width: 450px) and (max-width: 769px) {
+@media screen and (min-width: 28.125rem) and (max-width: 48.125rem) {
   .menu-item,
   nav .green-button {
     display: none;
   }
-  .payments div {
-    grid-column: span 2;
-  }
-  .payments h1 {
-    margin-top: 2rem;
-  }
-  .left-percent {
-    width: 100%;
+  nav {
+    margin-bottom: 1.9rem;
   }
   .payments article:first-child {
-    row-gap: 2rem;
+    flex-direction: column;
   }
+  .payments .center-vertically div {
+    width: 100%;
+  }
+  .payments article:first-child div:first-child {
+    margin-bottom: 0.6rem;
+  }
+  .payments article:last-child div {
+    grid-column: span 2;
+  }
+  .payments article:last-child,
+  .payments article:first-child {
+    margin-bottom: 1rem;
+  }
+
   section.growth-revenue {
     padding: 50px 0;
   }
@@ -552,22 +569,22 @@ footer a:hover {
   }
 }
 /***************** Medium screens *********************/
-@media screen and (min-width: 770px) and (max-width: 1249px) {
+@media screen and (min-width: 48.125rem) and (max-width: 78.125rem) {
   .menu-item,
   nav .green-button {
     display: none;
   }
 }
 /******************** Large screens ***********************/
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 78.125rem) {
   .side-bar {
     display: none;
   }
   .page-container {
-    width: 1250px;
+    width: 78.125rem;
   }
   .spacer div {
-    width: 1200px;
+    width: 75rem;
     margin: auto;
   }
 }
