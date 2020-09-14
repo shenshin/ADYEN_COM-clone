@@ -452,6 +452,11 @@ footer a:hover {
     font-weight: 500;
     line-height: 3.125rem;
   }
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.0375rem;
+    line-height: 3.125rem;
+  }
   a.green-button,
   a.green-text-button {
     width: 100%;
@@ -470,14 +475,16 @@ footer a:hover {
   }
   /* ********************** sales channels  **********************/
   .sales-channels {
-    padding: 50px 25px 60px 25px;
+    padding: 3.125rem 1.5625rem 3.75rem 1.5625rem;
   }
+  /* ********************** online-payments  **********************/
   .online-payments {
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
   }
   .online-payments article {
     grid-column: span 2;
   }
+  /* ********************** footer  **********************/
   footer {
     padding-top: 50px;
   }
