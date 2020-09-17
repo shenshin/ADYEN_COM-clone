@@ -241,11 +241,15 @@ a.green-text-button:hover {
 }
 /* ********************** growth-revenue section **********************/
 .growth-revenue {
+  background: var(--grey-background);
+}
+
+.growth-revenue div {
   padding: 6rem 0 5.2rem 0;
 
   display: flex;
-  background: var(--grey-background);
 }
+
 .growth-revenue article {
   flex-basis: 33.33%;
   text-align: center;
@@ -440,7 +444,7 @@ footer a:hover {
     width: 100%;
   }
   /* ****************** growth-revenue  ******************/
-  .growth-revenue {
+  .growth-revenue div {
     padding: 3.125rem 0 0.8rem 0;
 
     flex-direction: column;
@@ -516,7 +520,7 @@ footer a:hover {
     margin-bottom: 1rem;
   }
   /* ****************** growth-revenue  ********************/
-  .growth-revenue {
+  .growth-revenue div {
     padding: 3.125rem 0 0.8rem 0;
 
     flex-direction: column;
